@@ -1,3 +1,3 @@
-# mqtt-schemas
+# json-schemas
 
-Public schemas for MQTT topics
+Public json schemas

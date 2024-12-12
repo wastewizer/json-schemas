@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "d": {
+      "type": "object",
+      "properties": {
+        "w": {
+          "type": "number",
+          "description": "The current estimated weight in kilograms"
+        },
+        "mw": {
+          "type": "number",
+          "description": "The maximum weight in kilograms"
+        }
+      },
+      "required": ["w", "mw"]
+    },
+    "ts": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The timestamp of the update in ISO 8601 format"
+    }
+  },
+  "required": ["ts"]
+}

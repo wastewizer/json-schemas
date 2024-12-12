@@ -1,17 +1,17 @@
 {
-  "name": "@wastewizer/mqtt-schemas",
+  "name": "@wastewizer/json-schemas",
   "type": "module",
   "version": "0.0.0-development",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wastewizer/mqtt-schemas.git"
+    "url": "git+https://github.com/wastewizer/json-schemas.git"
   },
   "author": "WasteWizer",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/wastewizer/mqtt-schemas/issues"
+    "url": "https://github.com/wastewizer/json-schemas/issues"
   },
-  "homepage": "https://github.com/wastewizer/mqtt-schemas#readme",
+  "homepage": "https://github.com/wastewizer/json-schemas#readme",
   "packageManager": "yarn@4.5.3",
   "release": {
     "branches": [
@@ -27,7 +27,7 @@
         }
       ]
     ],
-    "tagFormat": "@wastewizer/mqtt-schemas@${version}"
+    "tagFormat": "@wastewizer/json-schemas@${version}"
   },
   "devDependencies": {
     "@commitlint/cli": "19.6.0",
