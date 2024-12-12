@@ -1,0 +1,37 @@
+name: Verify
+
+on:
+  pull_request:
+
+concurrency:
+  group: verify-${{ github.head_ref }}
+  cancel-in-progress: true
+
+env:
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+jobs:
+  test:
+    name: Tests
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: 'yarn'
+
+      - name: Install deps
+        run: |
+          yarn install --immutable
+
+      - name: Format
+        run: |
+          yarn format:check
+
+      - name: Types check
+        run: |
+          yarn test

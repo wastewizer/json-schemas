@@ -1,0 +1,3 @@
+yarn test
+yarn build
+yarn lint-staged --relative

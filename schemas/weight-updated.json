@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "weightKg": {
+      "type": "number",
+      "description": "The current estimated weight in kilograms"
+    },
+    "maxWeightKg": {
+      "type": "number",
+      "description": "The maximum weight in kilograms"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The timestamp of the update"
+    }
+  },
+  "required": ["weightKg", "maxWeightKg", "timestamp"]
+}
