@@ -2,23 +2,26 @@ import schema from 'fluent-json-schema';
 
 const weightUpdatedSchema = schema
   .object()
+  .description('A weight updated message for a container site')
   .prop(
     'd',
     schema
       .object()
+      .description('The data of the update')
+      .required()
       .prop(
         'w',
         schema
           .number()
-          .required()
-          .description('The current estimated weight in kilograms'),
+          .description('The current estimated weight in kilograms')
+          .required(),
       )
       .prop(
         'mw',
         schema
           .number()
-          .required()
-          .description('The maximum weight in kilograms'),
+          .description('The maximum weight in kilograms')
+          .required(),
       ),
   )
 
@@ -27,8 +30,8 @@ const weightUpdatedSchema = schema
     schema
       .string()
       .format('date-time')
-      .required()
-      .description('The timestamp of the update in ISO 8601 format'),
+      .description('The timestamp of the update in ISO 8601 format')
+      .required(),
   );
 
 export default weightUpdatedSchema;
