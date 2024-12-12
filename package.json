@@ -1,0 +1,45 @@
+{
+  "name": "@wastewizer/mqtt-schemas",
+  "version": "0.0.0-development",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wastewizer/mqtt-schemas.git"
+  },
+  "author": "WasteWizer",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/wastewizer/mqtt-schemas/issues"
+  },
+  "homepage": "https://github.com/wastewizer/mqtt-schemas#readme",
+  "packageManager": "yarn@4.5.1",
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      [
+        "@semantic-release/github",
+        {
+          "successComment": false,
+          "failComment": false,
+          "releasedLabels": false
+        }
+      ]
+    ],
+    "tagFormat": "@wastewizer/mqtt-schemas@${version}"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "19.6.0",
+    "@commitlint/config-conventional": "19.6.0",
+    "@wastewizer/lint-staged-config": "1.3.0",
+    "@wastewizer/prettier-config": "1.3.0",
+    "husky": "9.1.7",
+    "lint-staged": "15.2.11",
+    "prettier": "3.4.2"
+  },
+  "scripts": {
+    "postinstall": "husky",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  }
+}
