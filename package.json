@@ -12,7 +12,7 @@
     "url": "https://github.com/wastewizer/mqtt-schemas/issues"
   },
   "homepage": "https://github.com/wastewizer/mqtt-schemas#readme",
-  "packageManager": "yarn@4.5.1",
+  "packageManager": "yarn@4.5.3",
   "release": {
     "branches": [
       "main"
