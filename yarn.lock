@@ -215,9 +215,9 @@ __metadata:
   linkType: hard
 
 "@fastify/deepmerge@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@fastify/deepmerge@npm:2.0.0"
-  checksum: 10c0/ebed25084e8b5fe1b28127f408df9b683c1d0d45358ba4b98e101b75fbf6144c311608a3c1f6787dcd77a3afd6034116256440e7aaef6af12a1cd8b57c1069a3
+  version: 2.0.1
+  resolution: "@fastify/deepmerge@npm:2.0.1"
+  checksum: 10c0/043c7e5e028d01b4bdd6b99588e8f82e5b91399d68bcbcf11726c2d058faf6f0fdeecad837dded1e184430938cf29cfc65ae0d0ac4872ee865d32f6a3e86681f
   languageName: node
   linkType: hard
 
@@ -245,11 +245,11 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-  version: 22.10.2
-  resolution: "@types/node@npm:22.10.2"
+  version: 22.10.5
+  resolution: "@types/node@npm:22.10.5"
   dependencies:
     undici-types: "npm:~6.20.0"
-  checksum: 10c0/2c7b71a040f1ef5320938eca8ebc946e6905caa9bbf3d5665d9b3774a8d15ea9fab1582b849a6d28c7fc80756a62c5666bc66b69f42f4d5dafd1ccb193cdb4ac
+  checksum: 10c0/6a0e7d1fe6a86ef6ee19c3c6af4c15542e61aea2f4cee655b6252efb356795f1f228bc8299921e82924e80ff8eca29b74d9dd0dd5cc1a90983f892f740b480df
   languageName: node
   linkType: hard
 
@@ -689,9 +689,9 @@ __metadata:
   linkType: hard
 
 "fast-uri@npm:^3.0.1":
-  version: 3.0.3
-  resolution: "fast-uri@npm:3.0.3"
-  checksum: 10c0/4b2c5ce681a062425eae4f15cdc8fc151fd310b2f69b1f96680677820a8b49c3cd6e80661a406e19d50f0c40a3f8bffdd458791baf66f4a879d80be28e10a320
+  version: 3.0.4
+  resolution: "fast-uri@npm:3.0.4"
+  checksum: 10c0/802969cd9902678026021e8cc2df7cab989bee56a094f17f38b39908ac422b48ed05288042b60f472479c4a4311ba021fc7266de5cfde7ed5ec7538b8b910ada
   languageName: node
   linkType: hard
 
@@ -1485,9 +1485,9 @@ __metadata:
   linkType: hard
 
 "tinyexec@npm:^0.3.0":
-  version: 0.3.1
-  resolution: "tinyexec@npm:0.3.1"
-  checksum: 10c0/11e7a7c5d8b3bddf8b5cbe82a9290d70a6fad84d528421d5d18297f165723cb53d2e737d8f58dcce5ca56f2e4aa2d060f02510b1f8971784f97eb3e9aec28f09
+  version: 0.3.2
+  resolution: "tinyexec@npm:0.3.2"
+  checksum: 10c0/3efbf791a911be0bf0821eab37a3445c2ba07acc1522b1fa84ae1e55f10425076f1290f680286345ed919549ad67527d07281f1c19d584df3b74326909eb1f90
   languageName: node
   linkType: hard
 
