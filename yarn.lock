@@ -214,10 +214,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fastify/deepmerge@npm:^2.0.0":
-  version: 2.0.2
-  resolution: "@fastify/deepmerge@npm:2.0.2"
-  checksum: 10c0/dfb30896d374c25a3f5bc0550cb19d2014946392b2858fadd5feb1486eb3c37751db1db24dcbf801bb11465435939d0d75fb7ee65501287e77b4df7022b3509a
+"@fastify/deepmerge@npm:^3.0.0":
+  version: 3.1.0
+  resolution: "@fastify/deepmerge@npm:3.1.0"
+  checksum: 10c0/57eda9079e9ed6d137f966e8b0d08f219cbca6e79706a1be76fe10ba2b8fd87c33846f1c653299b09a2e8260ffba8c8fc708f9b40b54243648d6821061999c9b
   languageName: node
   linkType: hard
 
@@ -263,7 +263,7 @@ __metadata:
     "@wastewizer/prettier-config": "npm:1.3.0"
     ajv: "npm:8.17.1"
     ajv-formats: "npm:3.0.1"
-    fluent-json-schema: "npm:5.0.0"
+    fluent-json-schema: "npm:6.0.0"
     glob: "npm:11.0.1"
     husky: "npm:9.1.7"
     lint-staged: "npm:15.5.0"
@@ -708,12 +708,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fluent-json-schema@npm:5.0.0":
-  version: 5.0.0
-  resolution: "fluent-json-schema@npm:5.0.0"
+"fluent-json-schema@npm:6.0.0":
+  version: 6.0.0
+  resolution: "fluent-json-schema@npm:6.0.0"
   dependencies:
-    "@fastify/deepmerge": "npm:^2.0.0"
-  checksum: 10c0/d5d8be126c36d30bf8c3ac737dfeca7f9f63ea79cc31582d1f508b84263ae718bd4dadc8106c5b31ddabe918e554eda7e273ac4840412b543a09650a3a4027dd
+    "@fastify/deepmerge": "npm:^3.0.0"
+  checksum: 10c0/62d9921cb49dc3a12e6368a30176a04af0e29ceb03e6208af37a25c6cf3274cd67fca9e2d7576e6d0f4d339336164589e2901c54c5a4c8e8bb71d7fe02505920
   languageName: node
   linkType: hard
 
