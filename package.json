@@ -49,6 +49,6 @@
     "build": "node ./scripts/build.js && yarn format"
   },
   "dependencies": {
-    "fluent-json-schema": "5.0.0"
+    "fluent-json-schema": "6.0.0"
   }
 }
