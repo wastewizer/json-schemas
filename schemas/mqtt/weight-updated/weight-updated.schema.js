@@ -4,6 +4,19 @@ const weightUpdatedSchema = schema
   .object()
   .description('A weight updated message for a container site')
   .prop(
+    'msgID',
+    schema
+      .string()
+      .description(
+        'A static message ID in the format 000000000000000000000000-weight',
+      ),
+  )
+  .prop('msgVer', schema.string().description('The message version, e.g., 1.0'))
+  .prop(
+    'gwID',
+    schema.string().description('The gateway ID that sent the message'),
+  )
+  .prop(
     'd',
     schema
       .object()
@@ -24,7 +37,6 @@ const weightUpdatedSchema = schema
           .required(),
       ),
   )
-
   .prop(
     'ts',
     schema

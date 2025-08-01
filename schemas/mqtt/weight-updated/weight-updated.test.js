@@ -11,6 +11,9 @@ describe('weightUpdatedSchema', () => {
   it('should pass with a valid schema', () => {
     assert.ok(
       ajv.validate(weightUpdatedSchema.valueOf(), {
+        msgID: 'msgId',
+        msgVer: '1.0',
+        gwID: 'scalable-systems-group',
         d: {
           w: 100,
           mw: 200,
