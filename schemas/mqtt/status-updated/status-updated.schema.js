@@ -8,7 +8,7 @@ const statusUpdatedSchema = schema
     schema
       .string()
       .description(
-        'A static message ID in the format 000000000000000000000000-weight',
+        'A static message ID in the format 000000000000000000000000-status',
       ),
   )
   .prop('msgVer', schema.string().description('The message version, e.g., 1.0'))

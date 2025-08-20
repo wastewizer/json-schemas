@@ -5,7 +5,7 @@
   "properties": {
     "msgID": {
       "type": "string",
-      "description": "A static message ID in the format 000000000000000000000000-weight"
+      "description": "A static message ID in the format 000000000000000000000000-status"
     },
     "msgVer": {
       "type": "string",
@@ -25,7 +25,7 @@
         },
         "sc": {
           "type": "number",
-          "description": "The status code of the container site"
+          "description": "The status code of the container site - ONLINE=1, OFFLINE=2, DAMAGED=3"
         }
       },
       "required": ["s", "sc"]
