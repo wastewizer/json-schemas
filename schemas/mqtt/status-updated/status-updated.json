@@ -29,20 +29,22 @@
       },
       "required": ["s", "sc"]
     },
-    "ts": {
-      "type": "string",
-      "format": "date-time",
-      "description": "The timestamp of the update in ISO 8601 format"
-    },
-    "pts": {
-      "type": "string",
-      "format": "date-time",
-      "description": "The timestamp the message was published in ISO 8601 format"
-    },
-    "ptse": {
-      "type": "number",
-      "description": "The milliseconds since the epoch of when the message was published"
+    "m": {
+      "type": "object",
+      "description": "Metadata about the update",
+      "properties": {
+        "pts": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The timestamp the message was published in ISO 8601 format"
+        },
+        "ptse": {
+          "type": "number",
+          "description": "The milliseconds since the epoch of when the message was published"
+        }
+      },
+      "required": ["pts", "ptse"]
     }
   },
-  "required": ["d", "ts", "pts", "ptse"]
+  "required": ["d", "m"]
 }

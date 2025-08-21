@@ -15,24 +15,44 @@ describe('weightUpdatedSchema', () => {
         msgVer: '1.0',
         gwID: 'scalable-systems-group',
         d: {
+          ts: new Date().toISOString(),
           w: 100,
           mw: 200,
         },
-        ts: new Date().toISOString(),
-        pts: new Date().toISOString(),
-        ptse: Date.now(),
+        m: {
+          pts: new Date().toISOString(),
+          ptse: Date.now(),
+        },
       }),
     );
+  });
+
+  it('should fail without a timestamp', () => {
+    const isValid = ajv.validate(weightUpdatedSchema.valueOf(), {
+      d: {
+        w: 100,
+        mw: 200,
+      },
+      m: {
+        pts: new Date().toISOString(),
+        ptse: Date.now(),
+      },
+    });
+
+    assert.ok(isValid === false);
+    assert.equal(ajv.errors[0].message, "must have required property 'ts'");
   });
 
   it('should fail without a weight', () => {
     const isValid = ajv.validate(weightUpdatedSchema.valueOf(), {
       d: {
+        ts: new Date().toISOString(),
         mw: 200,
       },
-      ts: new Date().toISOString(),
-      pts: new Date().toISOString(),
-      ptse: Date.now(),
+      m: {
+        pts: new Date().toISOString(),
+        ptse: Date.now(),
+      },
     });
 
     assert.ok(isValid === false);
@@ -42,39 +62,29 @@ describe('weightUpdatedSchema', () => {
   it('should fail without a max weight', () => {
     const isValid = ajv.validate(weightUpdatedSchema.valueOf(), {
       d: {
+        ts: new Date().toISOString(),
         w: 100,
       },
-      ts: new Date().toISOString(),
-      pts: new Date().toISOString(),
-      ptse: Date.now(),
+      m: {
+        pts: new Date().toISOString(),
+        ptse: Date.now(),
+      },
     });
 
     assert.ok(isValid === false);
     assert.equal(ajv.errors[0].message, "must have required property 'mw'");
   });
 
-  it('should fail without a timestamp', () => {
-    const isValid = ajv.validate(weightUpdatedSchema.valueOf(), {
-      d: {
-        w: 100,
-        mw: 200,
-      },
-      pts: new Date().toISOString(),
-      ptse: Date.now(),
-    });
-
-    assert.ok(isValid === false);
-    assert.equal(ajv.errors[0].message, "must have required property 'ts'");
-  });
-
   it('should fail without a publish timestamp', () => {
     const isValid = ajv.validate(weightUpdatedSchema.valueOf(), {
       d: {
+        ts: new Date().toISOString(),
         w: 100,
         mw: 200,
       },
-      ts: new Date().toISOString(),
-      ptse: Date.now(),
+      m: {
+        ptse: Date.now(),
+      },
     });
 
     assert.ok(isValid === false);
@@ -84,11 +94,13 @@ describe('weightUpdatedSchema', () => {
   it('should fail without a publish time since epoch', () => {
     const isValid = ajv.validate(weightUpdatedSchema.valueOf(), {
       d: {
+        ts: new Date().toISOString(),
         w: 100,
         mw: 200,
       },
-      ts: new Date().toISOString(),
-      pts: new Date().toISOString(),
+      m: {
+        pts: new Date().toISOString(),
+      },
     });
 
     assert.ok(isValid === false);

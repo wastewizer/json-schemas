@@ -32,29 +32,30 @@ const statusUpdatedSchema = schema
       ),
   )
   .prop(
-    'ts',
+    'm',
     schema
-      .string()
-      .format('date-time')
-      .description('The timestamp of the update in ISO 8601 format')
-      .required(),
-  )
-  .prop(
-    'pts',
-    schema
-      .string()
-      .format('date-time')
-      .description('The timestamp the message was published in ISO 8601 format')
-      .required(),
-  )
-  .prop(
-    'ptse',
-    schema
-      .number()
-      .description(
-        'The milliseconds since the epoch of when the message was published',
+      .object()
+      .description('Metadata about the update')
+      .required()
+      .prop(
+        'pts',
+        schema
+          .string()
+          .format('date-time')
+          .description(
+            'The timestamp the message was published in ISO 8601 format',
+          )
+          .required(),
       )
-      .required(),
+      .prop(
+        'ptse',
+        schema
+          .number()
+          .description(
+            'The milliseconds since the epoch of when the message was published',
+          )
+          .required(),
+      ),
   );
 
 export default statusUpdatedSchema;

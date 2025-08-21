@@ -18,9 +18,10 @@ describe('statusUpdatedSchema', () => {
           s: 'ONLINE',
           sc: 1,
         },
-        ts: new Date().toISOString(),
-        pts: new Date().toISOString(),
-        ptse: Date.now(),
+        m: {
+          pts: new Date().toISOString(),
+          ptse: Date.now(),
+        },
       }),
     );
   });
@@ -30,9 +31,10 @@ describe('statusUpdatedSchema', () => {
       d: {
         sc: 1,
       },
-      ts: new Date().toISOString(),
-      pts: new Date().toISOString(),
-      ptse: Date.now(),
+      m: {
+        pts: new Date().toISOString(),
+        ptse: Date.now(),
+      },
     });
 
     assert.ok(isValid === false);
@@ -44,37 +46,26 @@ describe('statusUpdatedSchema', () => {
       d: {
         s: 'ONLINE',
       },
-      ts: new Date().toISOString(),
-      pts: new Date().toISOString(),
-      ptse: Date.now(),
+      m: {
+        pts: new Date().toISOString(),
+        ptse: Date.now(),
+      },
     });
 
     assert.ok(isValid === false);
     assert.equal(ajv.errors[0].message, "must have required property 'sc'");
   });
 
-  it('should fail without a timestamp', () => {
-    const isValid = ajv.validate(statusUpdatedSchema.valueOf(), {
-      d: {
-        s: 'ONLINE',
-        sc: 1,
-      },
-      pts: new Date().toISOString(),
-      ptse: Date.now(),
-    });
-
-    assert.ok(isValid === false);
-    assert.equal(ajv.errors[0].message, "must have required property 'ts'");
-  });
-
   it('should fail without a publish timestamp', () => {
     const isValid = ajv.validate(statusUpdatedSchema.valueOf(), {
       d: {
+        ts: new Date().toISOString(),
         s: 'ONLINE',
         sc: 1,
       },
-      ts: new Date().toISOString(),
-      ptse: Date.now(),
+      m: {
+        ptse: Date.now(),
+      },
     });
 
     assert.ok(isValid === false);
@@ -84,11 +75,13 @@ describe('statusUpdatedSchema', () => {
   it('should fail without a publish time since epoch', () => {
     const isValid = ajv.validate(statusUpdatedSchema.valueOf(), {
       d: {
+        ts: new Date().toISOString(),
         s: 'ONLINE',
         sc: 1,
       },
-      ts: new Date().toISOString(),
-      pts: new Date().toISOString(),
+      m: {
+        pts: new Date().toISOString(),
+      },
     });
 
     assert.ok(isValid === false);
