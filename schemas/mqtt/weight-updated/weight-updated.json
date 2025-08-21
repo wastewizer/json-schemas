@@ -34,10 +34,15 @@
       "format": "date-time",
       "description": "The timestamp of the update in ISO 8601 format"
     },
-    "tse": {
+    "pts": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The timestamp the message was published in ISO 8601 format"
+    },
+    "ptse": {
       "type": "number",
-      "description": "The milliseconds since the epoch of the update"
+      "description": "The milliseconds since the epoch of when the message was published"
     }
   },
-  "required": ["d", "ts", "tse"]
+  "required": ["d", "ts", "pts", "ptse"]
 }

@@ -19,7 +19,8 @@ describe('weightUpdatedSchema', () => {
           mw: 200,
         },
         ts: new Date().toISOString(),
-        tse: Date.now(),
+        pts: new Date().toISOString(),
+        ptse: Date.now(),
       }),
     );
   });
@@ -30,7 +31,8 @@ describe('weightUpdatedSchema', () => {
         mw: 200,
       },
       ts: new Date().toISOString(),
-      tse: Date.now(),
+      pts: new Date().toISOString(),
+      ptse: Date.now(),
     });
 
     assert.ok(isValid === false);
@@ -43,7 +45,8 @@ describe('weightUpdatedSchema', () => {
         w: 100,
       },
       ts: new Date().toISOString(),
-      tse: Date.now(),
+      pts: new Date().toISOString(),
+      ptse: Date.now(),
     });
 
     assert.ok(isValid === false);
@@ -56,23 +59,39 @@ describe('weightUpdatedSchema', () => {
         w: 100,
         mw: 200,
       },
-      tse: Date.now(),
+      pts: new Date().toISOString(),
+      ptse: Date.now(),
     });
 
     assert.ok(isValid === false);
     assert.equal(ajv.errors[0].message, "must have required property 'ts'");
   });
 
-  it('should fail without a time since epoch', () => {
+  it('should fail without a publish timestamp', () => {
     const isValid = ajv.validate(weightUpdatedSchema.valueOf(), {
       d: {
         w: 100,
         mw: 200,
       },
       ts: new Date().toISOString(),
+      ptse: Date.now(),
     });
 
     assert.ok(isValid === false);
-    assert.equal(ajv.errors[0].message, "must have required property 'tse'");
+    assert.equal(ajv.errors[0].message, "must have required property 'pts'");
+  });
+
+  it('should fail without a publish time since epoch', () => {
+    const isValid = ajv.validate(weightUpdatedSchema.valueOf(), {
+      d: {
+        w: 100,
+        mw: 200,
+      },
+      ts: new Date().toISOString(),
+      pts: new Date().toISOString(),
+    });
+
+    assert.ok(isValid === false);
+    assert.equal(ajv.errors[0].message, "must have required property 'ptse'");
   });
 });
