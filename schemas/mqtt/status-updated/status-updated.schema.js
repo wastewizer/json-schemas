@@ -3,18 +3,10 @@ import schema from 'fluent-json-schema';
 const statusUpdatedSchema = schema
   .object()
   .description('A status updated message for a container site')
-  .prop(
-    'msgID',
+  .additionalProperties(
     schema
-      .string()
-      .description(
-        'A static message ID in the format 000000000000000000000000-status',
-      ),
-  )
-  .prop('msgVer', schema.string().description('The message version, e.g., 1.0'))
-  .prop(
-    'gwID',
-    schema.string().description('The gateway ID that sent the message'),
+      .anyOf([schema.string(), schema.number()])
+      .description('Additional client defined properties'),
   )
   .prop(
     'd',

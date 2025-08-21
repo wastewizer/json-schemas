@@ -2,19 +2,18 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "description": "A weight updated message for a container site",
+  "additionalProperties": {
+    "anyOf": [
+      {
+        "type": "string"
+      },
+      {
+        "type": "number"
+      }
+    ],
+    "description": "Additional client defined properties"
+  },
   "properties": {
-    "msgID": {
-      "type": "string",
-      "description": "A static message ID in the format 000000000000000000000000-weight"
-    },
-    "msgVer": {
-      "type": "string",
-      "description": "The message version, e.g., 1.0"
-    },
-    "gwID": {
-      "type": "string",
-      "description": "The gateway ID that sent the message"
-    },
     "d": {
       "type": "object",
       "description": "The data of the update",
