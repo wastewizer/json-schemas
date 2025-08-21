@@ -19,6 +19,7 @@ describe('statusUpdatedSchema', () => {
           sc: 1,
         },
         ts: new Date().toISOString(),
+        tse: Date.now(),
       }),
     );
   });
@@ -29,6 +30,7 @@ describe('statusUpdatedSchema', () => {
         sc: 1,
       },
       ts: new Date().toISOString(),
+      tse: Date.now(),
     });
 
     assert.ok(isValid === false);
@@ -41,6 +43,7 @@ describe('statusUpdatedSchema', () => {
         s: 'ONLINE',
       },
       ts: new Date().toISOString(),
+      tse: Date.now(),
     });
 
     assert.ok(isValid === false);
@@ -53,9 +56,23 @@ describe('statusUpdatedSchema', () => {
         s: 'ONLINE',
         sc: 1,
       },
+      tse: Date.now(),
     });
 
     assert.ok(isValid === false);
     assert.equal(ajv.errors[0].message, "must have required property 'ts'");
+  });
+
+  it('should fail without a time since epoch', () => {
+    const isValid = ajv.validate(statusUpdatedSchema.valueOf(), {
+      d: {
+        s: 'ONLINE',
+        sc: 1,
+      },
+      ts: new Date().toISOString(),
+    });
+
+    assert.ok(isValid === false);
+    assert.equal(ajv.errors[0].message, "must have required property 'tse'");
   });
 });

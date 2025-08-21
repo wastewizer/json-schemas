@@ -34,7 +34,11 @@
       "type": "string",
       "format": "date-time",
       "description": "The timestamp of the update in ISO 8601 format"
+    },
+    "tse": {
+      "type": "number",
+      "description": "The milliseconds since the epoch of the update"
     }
   },
-  "required": ["d", "ts"]
+  "required": ["d", "ts", "tse"]
 }

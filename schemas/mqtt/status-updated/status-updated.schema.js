@@ -46,6 +46,13 @@ const statusUpdatedSchema = schema
       .format('date-time')
       .description('The timestamp of the update in ISO 8601 format')
       .required(),
+  )
+  .prop(
+    'tse',
+    schema
+      .number()
+      .description('The milliseconds since the epoch of the update')
+      .required(),
   );
 
 export default statusUpdatedSchema;

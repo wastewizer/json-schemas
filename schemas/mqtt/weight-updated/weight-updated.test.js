@@ -19,6 +19,7 @@ describe('weightUpdatedSchema', () => {
           mw: 200,
         },
         ts: new Date().toISOString(),
+        tse: Date.now(),
       }),
     );
   });
@@ -29,6 +30,7 @@ describe('weightUpdatedSchema', () => {
         mw: 200,
       },
       ts: new Date().toISOString(),
+      tse: Date.now(),
     });
 
     assert.ok(isValid === false);
@@ -41,6 +43,7 @@ describe('weightUpdatedSchema', () => {
         w: 100,
       },
       ts: new Date().toISOString(),
+      tse: Date.now(),
     });
 
     assert.ok(isValid === false);
@@ -53,9 +56,23 @@ describe('weightUpdatedSchema', () => {
         w: 100,
         mw: 200,
       },
+      tse: Date.now(),
     });
 
     assert.ok(isValid === false);
     assert.equal(ajv.errors[0].message, "must have required property 'ts'");
+  });
+
+  it('should fail without a time since epoch', () => {
+    const isValid = ajv.validate(weightUpdatedSchema.valueOf(), {
+      d: {
+        w: 100,
+        mw: 200,
+      },
+      ts: new Date().toISOString(),
+    });
+
+    assert.ok(isValid === false);
+    assert.equal(ajv.errors[0].message, "must have required property 'tse'");
   });
 });
