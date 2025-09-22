@@ -12,7 +12,7 @@
     "url": "https://github.com/wastewizer/json-schemas/issues"
   },
   "homepage": "https://github.com/wastewizer/json-schemas#readme",
-  "packageManager": "yarn@4.9.4",
+  "packageManager": "yarn@4.10.0",
   "release": {
     "branches": [
       "main"
