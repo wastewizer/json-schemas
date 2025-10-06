@@ -30,7 +30,7 @@
     "tagFormat": "@wastewizer/json-schemas@${version}"
   },
   "devDependencies": {
-    "@commitlint/cli": "20.0.0",
+    "@commitlint/cli": "20.1.0",
     "@commitlint/config-conventional": "20.0.0",
     "@wastewizer/lint-staged-config": "1.3.0",
     "@wastewizer/prettier-config": "1.3.0",
