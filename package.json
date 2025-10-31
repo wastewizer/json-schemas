@@ -12,7 +12,6 @@
     "url": "https://github.com/wastewizer/json-schemas/issues"
   },
   "homepage": "https://github.com/wastewizer/json-schemas#readme",
-  "engineStrict": true,
   "engines": {
     "node": "24.11.0",
     "yarn": "4.10.3"
