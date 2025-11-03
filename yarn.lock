@@ -417,8 +417,8 @@ __metadata:
   dependencies:
     "@commitlint/cli": "npm:20.1.0"
     "@commitlint/config-conventional": "npm:20.0.0"
-    "@wastewizer/lint-staged-config": "npm:1.3.0"
-    "@wastewizer/prettier-config": "npm:1.3.0"
+    "@wastewizer/lint-staged-config": "npm:1.3.1"
+    "@wastewizer/prettier-config": "npm:1.3.1"
     ajv: "npm:8.17.1"
     ajv-formats: "npm:3.0.1"
     eslint: "npm:9.38.0"
@@ -430,23 +430,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@wastewizer/lint-staged-config@npm:1.3.0":
-  version: 1.3.0
-  resolution: "@wastewizer/lint-staged-config@npm:1.3.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40wastewizer%2Flint-staged-config%2F1.3.0%2Fb12eaa7c314963e1f34140994d814a2f318552c6"
+"@wastewizer/lint-staged-config@npm:1.3.1":
+  version: 1.3.1
+  resolution: "@wastewizer/lint-staged-config@npm:1.3.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40wastewizer%2Flint-staged-config%2F1.3.1%2F1457ec16af04625abf0d99a172e240b20a9ea8fd"
   peerDependencies:
-    eslint: "*"
-    lint-staged: "*"
-    prettier: "*"
-  checksum: 10c0/ab10819ea404e09079b268c39d1670d486ba560b2a0775ce8b0665004485e5be21b9c1064e68246ed1bf243bd5818bb6a3bd017e69026778669a2a4fc82fac85
+    eslint: ">=9"
+    lint-staged: ">=16"
+    prettier: ">=3"
+  checksum: 10c0/3606f339906ab460e3ed696daa1cd823eb6e86c44e11ecb703061f93c1687831de2533cbd67910628762ee1e06b6bceac49755e5b5ac7b17fe56fe230e5c4338
   languageName: node
   linkType: hard
 
-"@wastewizer/prettier-config@npm:1.3.0":
-  version: 1.3.0
-  resolution: "@wastewizer/prettier-config@npm:1.3.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40wastewizer%2Fprettier-config%2F1.3.0%2Fe513e0242e1f35cbcf04e066a980f3cc311645f0"
+"@wastewizer/prettier-config@npm:1.3.1":
+  version: 1.3.1
+  resolution: "@wastewizer/prettier-config@npm:1.3.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40wastewizer%2Fprettier-config%2F1.3.1%2Fb278135bba813474cc2792fe653ab31de16951c7"
   peerDependencies:
-    prettier: "*"
-  checksum: 10c0/66032435983a6c25d5be770b549d637dd2a46d036270edd748e9f518c87c905dc55a5a866e2b76559df89f5c2f3c536c989b4a00b02a9f5a82a648def91c838a
+    prettier: ">=3"
+  checksum: 10c0/ee8a89a82f5ae697077142dbb173f9b74a760ad0c509e0abea4988c2c0d6cfc192f6cc1a6219116de22112881d9ceaea4e454021b083da5c2eb5f1235831612d
   languageName: node
   linkType: hard
 
