@@ -14,7 +14,7 @@
   "homepage": "https://github.com/wastewizer/json-schemas#readme",
   "engines": {
     "node": "24.11.0",
-    "yarn": "4.10.3"
+    "yarn": "4.11.0"
   },
   "scripts": {
     "postinstall": "husky",
@@ -39,7 +39,7 @@
     "lint-staged": "16.2.6",
     "prettier": "3.6.2"
   },
-  "packageManager": "yarn@4.10.3",
+  "packageManager": "yarn@4.11.0",
   "release": {
     "branches": [
       "main"
