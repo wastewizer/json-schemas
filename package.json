@@ -27,14 +27,14 @@
     "fluent-json-schema": "6.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "20.4.1",
-    "@commitlint/config-conventional": "20.4.1",
+    "@commitlint/cli": "20.4.2",
+    "@commitlint/config-conventional": "20.4.2",
     "@wastewizer/lint-staged-config": "1.3.1",
     "@wastewizer/prettier-config": "1.3.1",
     "ajv": "8.17.1",
     "ajv-formats": "3.0.1",
     "eslint": "10.0.0",
-    "glob": "13.0.3",
+    "glob": "13.0.6",
     "husky": "9.1.7",
     "lint-staged": "16.2.7",
     "prettier": "3.8.1"
