@@ -23,30 +23,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/cli@npm:20.4.2":
-  version: 20.4.2
-  resolution: "@commitlint/cli@npm:20.4.2"
+"@commitlint/cli@npm:20.4.3":
+  version: 20.4.3
+  resolution: "@commitlint/cli@npm:20.4.3"
   dependencies:
-    "@commitlint/format": "npm:^20.4.0"
-    "@commitlint/lint": "npm:^20.4.2"
-    "@commitlint/load": "npm:^20.4.0"
-    "@commitlint/read": "npm:^20.4.0"
-    "@commitlint/types": "npm:^20.4.0"
+    "@commitlint/format": "npm:^20.4.3"
+    "@commitlint/lint": "npm:^20.4.3"
+    "@commitlint/load": "npm:^20.4.3"
+    "@commitlint/read": "npm:^20.4.3"
+    "@commitlint/types": "npm:^20.4.3"
     tinyexec: "npm:^1.0.0"
     yargs: "npm:^17.0.0"
   bin:
     commitlint: ./cli.js
-  checksum: 10c0/ef091ed137492cc7a86ba98e4881eb251b2fd205056932dcde7f9a8e3e4aaf4ff1378cbeeee0b666b50d9533c2c20e58555ee179ba92d4225ef856515ad78eef
+  checksum: 10c0/1f54b6870a16548a6af189336c479ed49ab8da615fbaec4c8ff3124a115db0a38bdbd07d49afe27e0d1ac35ba723640532db2b4f3c96720515eca0aa9265747d
   languageName: node
   linkType: hard
 
-"@commitlint/config-conventional@npm:20.4.2":
-  version: 20.4.2
-  resolution: "@commitlint/config-conventional@npm:20.4.2"
+"@commitlint/config-conventional@npm:20.4.3":
+  version: 20.4.3
+  resolution: "@commitlint/config-conventional@npm:20.4.3"
   dependencies:
-    "@commitlint/types": "npm:^20.4.0"
-    conventional-changelog-conventionalcommits: "npm:^9.1.0"
-  checksum: 10c0/d737b6682a4237914372b86802772c1ff1d3414f1a167510859fc611986d1c401c8976c41f16b9e06439bd133fcf67ab7b63a72608a0c18e5e79614c995339b4
+    "@commitlint/types": "npm:^20.4.3"
+    conventional-changelog-conventionalcommits: "npm:^9.2.0"
+  checksum: 10c0/c7c6fb0b3201b17fae3a3e488b20795e7facbda511017d96939029f83d320567c310576ec9074f9536a3c811ea5d8038b3ddc92905c198e24c00b1a2759a8c84
   languageName: node
   linkType: hard
 
@@ -81,7 +81,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/format@npm:^20.4.0":
+"@commitlint/format@npm:^20.4.3":
   version: 20.4.3
   resolution: "@commitlint/format@npm:20.4.3"
   dependencies:
@@ -101,7 +101,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/lint@npm:^20.4.2":
+"@commitlint/lint@npm:^20.4.3":
   version: 20.4.3
   resolution: "@commitlint/lint@npm:20.4.3"
   dependencies:
@@ -113,7 +113,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/load@npm:^20.4.0":
+"@commitlint/load@npm:^20.4.3":
   version: 20.4.3
   resolution: "@commitlint/load@npm:20.4.3"
   dependencies:
@@ -148,7 +148,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/read@npm:^20.4.0":
+"@commitlint/read@npm:^20.4.3":
   version: 20.4.3
   resolution: "@commitlint/read@npm:20.4.3"
   dependencies:
@@ -203,7 +203,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/types@npm:^20.4.0, @commitlint/types@npm:^20.4.3":
+"@commitlint/types@npm:^20.4.3":
   version: 20.4.3
   resolution: "@commitlint/types@npm:20.4.3"
   dependencies:
@@ -347,8 +347,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@wastewizer/json-schemas@workspace:."
   dependencies:
-    "@commitlint/cli": "npm:20.4.2"
-    "@commitlint/config-conventional": "npm:20.4.2"
+    "@commitlint/cli": "npm:20.4.3"
+    "@commitlint/config-conventional": "npm:20.4.3"
     "@wastewizer/lint-staged-config": "npm:1.3.1"
     "@wastewizer/prettier-config": "npm:1.3.1"
     ajv: "npm:8.18.0"
@@ -602,7 +602,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"conventional-changelog-conventionalcommits@npm:^9.1.0":
+"conventional-changelog-conventionalcommits@npm:^9.2.0":
   version: 9.3.0
   resolution: "conventional-changelog-conventionalcommits@npm:9.3.0"
   dependencies:
